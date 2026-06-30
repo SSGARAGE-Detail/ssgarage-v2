@@ -258,3 +258,53 @@ list.innerHTML+=`
 });
 
 });
+/* -----------------------
+GOOGLE MAP
+----------------------- */
+
+const map = document.getElementById("googleMap");
+
+if(map){
+
+map.innerHTML = `
+
+<iframe
+src="https://www.google.com/maps?q=에스에스개러지&output=embed"
+width="100%"
+height="100%"
+style="border:0;"
+loading="lazy"
+allowfullscreen>
+</iframe>
+
+`;
+
+}
+
+/* -----------------------
+IMAGE ERROR
+----------------------- */
+
+document.querySelectorAll("img").forEach(img=>{
+
+img.onerror=function(){
+
+this.style.display="none";
+
+};
+
+});
+
+/* -----------------------
+CURRENT YEAR
+----------------------- */
+
+const year=document.getElementById("year");
+
+if(year){
+
+year.textContent=new Date().getFullYear();
+
+}
+
+});
